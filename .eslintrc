@@ -1,0 +1,34 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 2019,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": ["airbnb", "airbnb/hooks", "eslint-config-prettier"],
+	"rules": {
+		"strict": ["error", "never"],
+		"linebreak-style": "off",
+		"indent": ["error", "tab"],
+		"no-tabs": "off",
+		"import/prefer-default-export": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+		"react/jsx-indent": [2, "tab"]
+	},
+	"env": {
+		"browser": true
+	},
+	"overrides": [
+		{
+			"files": "**/*.+(ts|tsx)",
+			"parser": "@typescript-eslint/parser",
+			"plugins": ["@typescript-eslint/eslint-plugin"],
+			"extends": [
+				"plugin:@typescript-eslint/eslint-recommended",
+				"plugin:@typescript-eslint/recommended",
+				"eslint-config-prettier/@typescript-eslint"
+			]
+		}
+	]
+}
